@@ -1,11 +1,12 @@
-Terry Stops Analysis and Predictive Modeling
-📌 Project Overview
+# Terry Stops Analysis and Predictive Modeling
+
+## 📌 Project Overview
 
 This project analyzes Terry Stops data to understand the factors influencing arrest decisions. Using exploratory data analysis (EDA) and machine learning models, the project seeks to identify patterns and improve predictive accuracy of arrest outcomes.
 
 The key goal is to balance interpretability and predictive performance while addressing challenges such as class imbalance (far fewer arrests compared to non-arrests).
 
-🗂 Dataset
+## 🗂 Dataset
 
 Original Distribution
 
@@ -21,7 +22,7 @@ Non-Arrests (0): 45,830
 
 SMOTE (Synthetic Minority Oversampling Technique) was applied only to the training data to handle class imbalance, while the test set remained imbalanced for realistic evaluation.
 
-🔍 Exploratory Data Analysis (EDA)
+## 🔍 Exploratory Data Analysis (EDA)
 
 Conducted univariate, bivariate, and multivariate analysis.
 
@@ -29,7 +30,7 @@ Identified correlations between demographics, frisk/search flags, and arrest lik
 
 Applied chi-square tests to confirm significant associations.
 
-⚙️ Models Implemented
+## ⚙️ Models Implemented
 
 Logistic Regression
 
@@ -47,7 +48,7 @@ Threshold optimization applied for better minority class detection.
 
 Strength: Higher accuracy and weighted F1 score, capturing more complex patterns.
 
-📊 Model Performance
+## 📊 Model Performance
 Logistic Regression (Tuned + Optimized Threshold)
 
 Accuracy: 0.67
@@ -68,7 +69,7 @@ Precision (Arrests): 0.21
 
 F1-Score (Arrests): 0.29
 
-✅ Observations
+## ✅ Observations
 
 Both models suffer from low precision for arrests (class 1) due to real-world class imbalance.
 
@@ -76,7 +77,7 @@ Logistic Regression provided interpretability but weaker predictive performance.
 
 XGBoost outperformed Logistic Regression with higher accuracy and weighted F1 score, offering a better balance between detecting arrests and minimizing false positives.
 
-📌 Why XGBoost Was Selected
+## 📌 Why XGBoost Was Selected
 
 Best overall performance on accuracy (0.75) and weighted F1 (0.79).
 
@@ -86,7 +87,7 @@ More robust to imbalanced data (especially after SMOTE + threshold tuning).
 
 Provides interpretable feature importance for actionable insights.
 
-🚀 Recommendations
+## 🚀 Recommendations
 
 Overfitting control: Apply regularization (max_depth, min_child_weight, subsample).
 
@@ -98,7 +99,7 @@ Threshold adjustment: Calibrate thresholds depending on whether recall or precis
 
 Deployment monitoring: Continuously monitor performance in real-world data, as class imbalance may shift.
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 Python (Pandas, NumPy, Scikit-learn, Imbalanced-learn, XGBoost)
 
